@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "StoryCam",
+    "slug": "storycam-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "backgroundColor": "#1a1a2e"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pedrobarbier.storycam",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Precisamos acessar a câmera para você tirar fotos dentro do app.",
+        "NSPhotoLibraryUsageDescription": "Precisamos acessar suas fotos para você escolher uma imagem já existente.",
+        "NSPhotoLibraryAddUsageDescription": "Precisamos salvar a foto capturada na sua galeria."
+      }
+    },
+    "android": {
+      "package": "com.pedrobarbier.storycam",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_MEDIA_IMAGES"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Precisamos acessar suas fotos para você escolher uma imagem já existente.",
+          "cameraPermission": "Precisamos acessar a câmera para você tirar fotos dentro do app."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Precisamos acessar suas fotos.",
+          "savePhotosPermission": "Precisamos salvar a foto capturada na sua galeria.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-# StoryCam 📸
+# StoryCam 
 
 Desenvolvido por **Pedro Barbier**.
 
